@@ -1,131 +1,252 @@
-/* General */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(120deg, #d0f0ff, #f0ffd0);
-    margin: 0;
-    padding: 0;
-    color: #333;
+/* ========== General Styles ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #d0f0ff, #f0ffd0);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ========== Header ========== */
 header {
-    background: #4caf50;
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4caf50;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    font-weight: 600;
+  font-weight: 600;
+  font-size: 1.8rem;
 }
 
-.xp-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.user-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
+.xp-container, .coins-container, .level-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+}
+
+/* XP Bar */
 .xp-bar {
-    width: 150px;
-    height: 15px;
-    background: #a0e0a0;
-    border-radius: 10px;
-    overflow: hidden;
+  width: 150px;
+  height: 15px;
+  background: #a0e0a0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 5px;
 }
 
 #xp-fill {
-    height: 100%;
-    width: 0%;
-    background: #ffd700;
-    border-radius: 10px;
-    transition: width 0.5s;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #ffd700, #ffab00);
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
 }
 
-/* Main */
+/* ========== Main Sections ========== */
 main {
-    padding: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-/* Deck creation */
+/* ========== Deck Creation ========== */
 .create-deck {
-    background: rgba(255,255,255,0.9);
-    padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 2rem;
+  background: rgba(255,255,255,0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.create-deck input, .create-deck textarea {
-    width: 100%;
-    padding: 0.7rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+.create-deck h2 {
+  margin-bottom: 1rem;
+}
+
+.create-deck input,
+.create-deck textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
 .create-deck button {
-    background: #4caf50;
-    color: white;
-    border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .create-deck button:hover {
-    background: #45a049;
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Deck grid */
+/* ========== Deck Grid ========== */
 .deck-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
 }
 
 .deck-card {
-    background: #e0f7fa;
-    padding: 1rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+  background: #e0f7fa;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .deck-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
 .deck-card h3 {
-    margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
 .deck-card button {
-    margin: 0.3rem 0.2rem;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-    background: #4caf50;
-    color: white;
+  margin: 0.3rem 0.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: #4caf50;
+  color: white;
+  transition: 0.2s;
 }
 
 .deck-card button:hover {
-    background: #45a049;
+  background: #45a049;
+  transform: translateY(-2px);
 }
 
-/* Leaderboard */
+/* ========== Leaderboard ========== */
 .leaderboard-section {
-    margin-top: 2rem;
-    background: rgba(255,255,255,0.9);
-    padding: 1rem;
-    border-radius: 15px;
+  background: rgba(255,255,255,0.9);
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 #leaderboard-list li {
-    margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  font-weight: 500;
+}
+
+/* ========== Badges ========== */
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.badge-grid img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #ffd700;
+  transition: transform 0.3s;
+}
+
+.badge-grid img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* ========== Avatars ========== */
+.avatar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.avatar-grid img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #4caf50;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.avatar-grid img:hover {
+  transform: scale(1.1);
+  border-color: #ffd700;
+}
+
+/* ========== Games Section ========== */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.game-grid button {
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.game-grid button:hover {
+  background: #1976d2;
+  transform: translateY(-2px);
+}
+
+/* ========== Stats Section ========== */
+.stats-section {
+  background: rgba(255,255,255,0.9);
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .deck-grid, .badge-grid, .avatar-grid, .game-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
 }
