@@ -1,44 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudyMaster</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyMaster - Full Version</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>StudyMaster</h1>
-        <div class="xp-container">
-            <span>XP:</span>
-            <div class="xp-bar">
-                <div id="xp-fill"></div>
-            </div>
-            <span id="xp-number">0</span>
-        </div>
-    </header>
+<!-- Header with XP, Coins, Level -->
+<header>
+  <h1>StudyMaster</h1>
+  <div class="user-stats">
+    <div class="xp-container">
+      <span>XP:</span>
+      <div class="xp-bar"><div id="xp-fill"></div></div>
+      <span id="xp-number">0</span>
+    </div>
+    <div class="coins-container">
+      Coins: <span id="coins">0</span>
+    </div>
+    <div class="level-container">
+      Level: <span id="level">1</span>
+    </div>
+  </div>
+</header>
 
-    <main>
-        <section class="create-deck">
-            <h2>Create a Deck</h2>
-            <input type="text" id="deck-title" placeholder="Deck Title">
-            <textarea id="deck-text" placeholder="Paste your study material here..."></textarea>
-            <button id="create-deck">Create Deck</button>
-        </section>
+<!-- Main content -->
+<main>
+  <!-- Deck creation -->
+  <section class="create-deck">
+    <h2>Create a Deck</h2>
+    <input type="text" id="deck-title" placeholder="Deck Title">
+    <textarea id="deck-text" placeholder="Paste your study material here..."></textarea>
+    <button id="create-deck">Create Deck</button>
+  </section>
 
-        <section class="deck-list-section">
-            <h2>Your Decks</h2>
-            <div id="deck-list" class="deck-grid"></div>
-        </section>
+  <!-- Deck List -->
+  <section class="deck-list-section">
+    <h2>Your Decks</h2>
+    <div id="deck-list" class="deck-grid"></div>
+  </section>
 
-        <section class="leaderboard-section">
-            <h2>Leaderboard</h2>
-            <ul id="leaderboard-list"></ul>
-        </section>
-    </main>
+  <!-- Leaderboard -->
+  <section class="leaderboard-section">
+    <h2>Leaderboard</h2>
+    <ul id="leaderboard-list"></ul>
+  </section>
 
-    <script src="script.js"></script>
-    <script src="audio.js"></script>
+  <!-- Badges -->
+  <section class="badges-section">
+    <h2>Your Badges</h2>
+    <div id="badges-list" class="badge-grid"></div>
+  </section>
+
+  <!-- Avatars -->
+  <section class="avatars-section">
+    <h2>Customize Avatar</h2>
+    <div id="avatars-list" class="avatar-grid"></div>
+  </section>
+
+  <!-- Games Section -->
+  <section class="games-section">
+    <h2>Study Games</h2>
+    <div id="games-list" class="game-grid"></div>
+  </section>
+
+  <!-- User Stats -->
+  <section class="stats-section">
+    <h2>Statistics</h2>
+    <div id="stats-container"></div>
+  </section>
+</main>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+<script src="audio.js"></script>
+<script src="games.js"></script>
+<script src="leaderboard.js"></script>
 </body>
 </html>
