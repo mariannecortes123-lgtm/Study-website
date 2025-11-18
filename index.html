@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyMaster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>StudyMaster</h1>
+        <div id="xp">XP: <span>0</span></div>
+    </header>
+
+    <main>
+        <section id="deck-creation">
+            <h2>Create a Deck</h2>
+            <textarea id="deck-text" placeholder="Paste your study material here..."></textarea>
+            <input type="text" id="deck-title" placeholder="Deck title">
+            <button id="create-deck">Create Deck</button>
+        </section>
+
+        <section id="decks">
+            <h2>Your Decks</h2>
+            <div id="deck-list"></div>
+        </section>
+
+        <section id="leaderboard">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboard-list"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="audio.js"></script>
+</body>
+</html>
